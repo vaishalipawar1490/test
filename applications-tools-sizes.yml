@@ -1,0 +1,13 @@
+name: List of tools and their sizes
+on: workflow_dispatch
+jobs:
+  show_tools:
+  runs-on: macos-14
+  steps: 
+    - name: disk usage 
+      run: df -h
+    - name: Node.js versions and their sizes 
+      echo " Node.js Versions and sizes "  
+      du -sh /Users/runner/hostedtoolcavhed/node/* | sort -hr
+
+  
