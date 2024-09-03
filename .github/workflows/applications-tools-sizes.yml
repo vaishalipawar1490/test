@@ -21,7 +21,7 @@ jobs:
        du -sh /Applications/Xcode*.app 
     - name: Python version and sizes
       run: |
-        du -sh /Users/runner/hostedtoolcache/*/python/*   
+        du -sh /Users/runner/hostedtoolcache/Python/*2>/dev/null | sort -hr  
 
 
 
