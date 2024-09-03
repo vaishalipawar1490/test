@@ -10,7 +10,16 @@ jobs:
       run: |
         echo "Node.js Versions and sizes"  
         du -sh /Users/runner/hostedtoolcache/node/* | sort -hr
-        
+    - name: Homebrew pacakges and sizes
+      run: |
+        echo "Homebrew packages and sizes"
+        brew list --formula -1 | while read -r pkg; do
+        du -sh "${HOMEBREW_CELLER}/$pkg" | awk '{print $1, $2}'
+        done | sort -hr 
+
+
+
+
 
 
   
