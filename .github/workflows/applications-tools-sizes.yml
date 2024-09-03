@@ -16,6 +16,10 @@ jobs:
         brew list --formula -1 | while read -r pkg; do
         du -sh "${HOMEBREW_CELLER}/$pkg" | awk '{print $1, $2}'
         done | sort -hr 
+    - name: Xcode and sizes
+      run: |
+       du -sh /Applications/Xcode*.app | sort -hr 
+       
 
 
 
