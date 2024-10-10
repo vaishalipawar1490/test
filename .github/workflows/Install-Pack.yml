@@ -5,7 +5,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy: 
       matrix: 
-        os: [macos-12,macos-13,macos-13-arm64,macos-14,macos-14-arm64,macos-15,macos-15-arm64]
+        os: [macos-12,macos-13,macos-14,macos-15]
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
