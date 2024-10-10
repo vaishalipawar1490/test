@@ -1,1 +1,20 @@
-
+name: List of tools and their sizes
+on: workflow_dispatch
+jobs:
+  install-pack-cli:
+    runs-on: ${{ matrix.os }}
+    strategy: 
+      matrix: 
+        os: [macos-12,macos-13,macos-13-arm64,macos-14,macos-14-arm64,macos-15,macos-15-arm64]
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+      - name: Install Pack CLI
+        run: | 
+          brew install buildpacks/tap/pack
+          echo "Pack CLI version installed: $(pack --version)"
+      - name: Verify Pack Installation
+        run: |
+         pack --version
+         which pack 
+     
