@@ -1,4 +1,4 @@
-name: List of tools and their sizes
+name: Install Pcak CLI on macOS
 on: workflow_dispatch
 jobs:
   install-pack-cli:
