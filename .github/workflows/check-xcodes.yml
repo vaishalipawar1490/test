@@ -1,4 +1,4 @@
-name: Testing Generic
+name: Testing Xcodes
 
 on:
   workflow_dispatch:
